@@ -1,6 +1,6 @@
 package com.geeksforgeeks.problems.MultiplePointer;
 
-import java.util.HashMap;
+//import java.util.HashMap;
 
 public class FindPairWithGivenSum {
 

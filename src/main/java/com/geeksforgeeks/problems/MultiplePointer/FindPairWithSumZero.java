@@ -8,6 +8,11 @@ package com.geeksforgeeks.problems.MultiplePointer;
  *
  * Array should be sorted
  * Used for searching pair in sorted array
+ *
+ * array question deals with finding two numbers in an array that satisfy a certain condition,
+ * either directly or indirectly, two-pointer should be the first strategy that comes to mind
+ *
+ *
  */
 public class FindPairWithSumZero {
 
