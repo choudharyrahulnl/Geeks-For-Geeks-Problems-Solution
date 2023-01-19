@@ -15,7 +15,7 @@ public class FindAveragePair {
         int end = nums.length-1;
 
         while (start < end) {
-            float avg = ((float) nums[start] + nums[end]) / 2;
+            float avg = (float) (nums[start] + nums[end]) / 2;
 
             if(avg == givenAvg) {
                 System.out.println(start + ", " + end);

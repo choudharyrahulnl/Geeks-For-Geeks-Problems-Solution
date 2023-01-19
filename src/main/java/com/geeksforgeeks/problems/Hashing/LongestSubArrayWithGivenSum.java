@@ -26,6 +26,11 @@ public class LongestSubArrayWithGivenSum {
 
             prefixSum = prefixSum + num[i];
 
+            // if map contains prefixSum-givenSum then calculate the length
+            if(map.containsKey(prefixSum-givenSum)) {
+                longestSubArray = Math.max(longestSubArray, i - map.get(prefixSum-givenSum));
+            }
+
             // corner case
             if(prefixSum == givenSum) {
                 return i + 1;
@@ -36,10 +41,7 @@ public class LongestSubArrayWithGivenSum {
                 map.put(prefixSum, i);
             }
 
-            // if map contains prefixSum-givenSum then calculate the length
-            if(map.containsKey(prefixSum-givenSum)) {
-                longestSubArray = Math.max(longestSubArray, i - map.get(prefixSum-givenSum));
-            }
+
         }
 
         return longestSubArray;

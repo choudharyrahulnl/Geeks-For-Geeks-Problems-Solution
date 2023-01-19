@@ -11,17 +11,18 @@ public class WordFrequencyCounter {
     }
 
     private static void wordFrequencyCounter(String word) {
-        word = word.toLowerCase();
+        // word = word.toLowerCase();
         String[] words = word.split(" ");
 
         HashMap<String,Integer> map = new HashMap<>();
 
         for (int i = 0; i < words.length; i++) {
-            if(map.containsKey(words[i])) {
-                map.put(words[i], map.get(words[i]) + 1);
-            } else {
-                map.put(words[i],1);
-            }
+//            if(map.containsKey(words[i])) {
+//                map.put(words[i], map.get(words[i]) + 1);
+//            } else {
+//                map.put(words[i],1);
+//            }
+            map.put(words[i].toLowerCase(), map.getOrDefault(words[i].toLowerCase(),0) + 1);
         }
 
         System.out.println(map);

@@ -32,20 +32,22 @@ public class SecondArrayDoubleOfFirst {
 
         // Loop over first array
         for (Integer num : num1) {
-            if (map1.get(num) == null) {
-                map1.put(num, 1);
-            } else {
-                map1.put(num, map1.get(num) + 1);
-            }
+//            if (map1.get(num) == null) {
+//                map1.put(num, 1);
+//            } else {
+//                map1.put(num, map1.get(num) + 1);
+//            }
+            map1.put(num, map1.getOrDefault(num,0) + 1);
         }
         System.out.println(map1);
 
         for (Integer num : num2) {
-            if (map2.get(num) == null) {
-                map2.put(num, 1);
-            } else {
-                map2.put(num, map2.get(num) + 1);
-            }
+//            if (map2.get(num) == null) {
+//                map2.put(num, 1);
+//            } else {
+//                map2.put(num, map2.get(num) + 1);
+//            }
+            map2.put(num, map2.getOrDefault(num,0) + 1);
         }
         System.out.println(map2);
 
